@@ -1,0 +1,1266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #f1f3f2;
+    font-size: 14px;
+}
+
+canvas{
+    width: 100% !important;
+}
+
+img{
+    object-fit: cover;
+}
+
+body{
+        background-color: #ffffff;  /* or you can simply use 'white' */
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+}
+
+.search-wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* This will make it take up available space */
+    box-sizing: border-box;
+}
+
+.container h1,
+.bottom-container .prog-status .header h4 {
+    color: #2c3e50;
+}
+
+form {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+form input {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 25px 0 0 25px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+form button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    background-color: #031224;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.top-container{
+    background: #031224;
+    border-radius: 0px;
+    padding: 10px;
+}
+
+.top-container .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 14px;
+    border-bottom: 2px solid #1e293b;
+}
+
+.top-container .nav .logo{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.top-container .nav .logo i{
+    color: #f1f3f2;
+    font-size: 60px;
+}
+
+.top-container .nav .logo a{
+    font-size: 20px;
+}
+
+.top-container .nav .nav-links{
+    display: flex;
+    gap: 20px;
+}
+
+.top-container .nav .nav-links a{
+    color: #ccc;
+    transition: all 0.3s ease;
+}
+
+.top-container .nav .nav-links a:hover{
+    color: #fff;
+}
+
+.top-container .nav .right-section{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-container .nav .right-section > i{
+    color: #f1f3f2;
+    background: #1e293b;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.top-container .nav .right-section .profile{
+    display: flex;
+    align-items: center;
+    background: #1e293b;
+    padding: 0 10px;
+    border-radius: 50px;
+    gap: 10px;
+}
+
+.top-container .nav .right-section .profile .info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-container .nav .right-section .profile .info img{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    border: 1px solid #f1f3f2;
+    object-fit: cover; /* Add this property to ensure the image covers the circle */
+}
+
+.top-container .nav .right-section .profile .info a{
+    font-size: 13px;
+}
+
+.top-container .nav .right-section .profile .info p{
+    font-size: 13px;
+    color: #ccc;
+}
+
+.top-container .nav .right-section .profile > i{
+    color: #f1f3f2;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.top-container .status{
+    padding: 20px 10px 10px;
+}
+
+.top-container .status .header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.top-container .status .header h4{
+    color: #f1f3f2;
+    font-weight: 500;
+}
+
+.top-container .status .header h4#big {
+    flex: 3;
+}
+
+.top-container .status .header h4#small{
+    flex: 1;
+    padding-left: 90px;
+}
+
+.top-container .status .items-list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-container .status .items-list .item{
+    background: #ffffff;
+    width: 25%;
+    padding: 10px 15px;
+    border-radius: 0px;
+    margin: 0 5px;
+}
+
+.bottom-container{
+    display: flex;
+    gap: 20px;
+    padding: 15px 30px;
+}
+
+.bottom-container .popular,
+.bottom-container .market-status {
+    background: #fefefe;
+    padding: 10px 15px;
+    border-radius: 0px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: none;
+}
+
+/* Remove background and box styling for prog-status */
+.bottom-container .prog-status {
+    background: transparent;
+    padding: 0;
+    max-height: none;
+    overflow-y: visible;
+    box-shadow: none;
+}
+
+/* Increase text size in the basic financials section */
+.bottom-container .prog-status .details .item h2 {
+    font-size: 36px;  /* Increased from 30px */
+    font-weight: 400;
+}
+
+.bottom-container .prog-status .details .item p {
+    font-size: 15px;  /* Increased from 13px */
+    color: #9b9b9b;
+}
+
+/* Increase header text size */
+.bottom-container .prog-status .header h4,
+.bottom-container .popular .header h4 {
+    font-size: 18px;  /* Added this line */
+    font-weight: 600;
+}
+
+/* Increase tab text size */
+.bottom-container .prog-status .header .tabs a {
+    padding: 4px 20px;
+    font-size: 25px;  /* Increased from 12px */
+    color: #000;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* For any additional text elements */
+.bottom-container .prog-status {
+    font-size: 20px;  /* Base font size for other text */
+}
+
+/* For market status text if needed */
+.bottom-container .market-status .events .item .event-info a {
+    font-size: 20px;  /* Increased from 14px */
+}
+
+/* Specifically for market news */
+.market-news {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-height: 400px; /* Adjust this value as needed */
+    overflow-y: auto;
+}
+
+/* Make the news items more compact */
+.news-item {
+    padding: 15px; /* Reduced padding */
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.news-item h5 {
+    font-size: 1rem; /* Slightly smaller font */
+    margin-bottom: 8px;
+}
+
+.news-content {
+    gap: 10px; /* Reduced gap */
+}
+
+.news-image {
+    width: 120px; /* Smaller images */
+    height: 80px;
+}
+
+.news-summary {
+    font-size: 0.85rem; /* Smaller text */
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.bottom-container .prog-status .details {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.bottom-container .prog-status .header {
+    margin-bottom: 20px;
+}
+
+/* Adjust market status content */
+.bottom-container .market-status .events .item {
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.bottom-container .market-status h4 {
+    margin-bottom: 15px; /* Adjust the value to set the gap */
+}
+
+
+.bottom-container .prog-status{
+    width: 50%;
+}
+
+.bottom-container .prog-status .header,
+.bottom-container .popular .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.bottom-container .prog-status .header h4,
+.bottom-container .popular .header h4{
+    font-weight: 600;
+}
+
+.bottom-container .prog-status .header .tabs{
+    background: #f3f3f3;
+    padding: 4px;
+    border-radius: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.bottom-container .prog-status .header .tabs a{
+    padding: 4px 20px;
+    font-size: 12px;
+    color: #000;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.bottom-container .prog-status .header .tabs a.active{
+    background: #fff;
+}
+
+.bottom-container .prog-status .details{
+    display: flex;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.bottom-container .prog-status .details .item h2{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.bottom-container .prog-status .details .item p{
+    font-size: 13px;
+    color: #9b9b9b;
+}
+
+.bottom-container .prog-status .details .separator{
+    width: 2px;
+    height: 70px;
+    background: #f3f3f3;
+}
+
+.bottom-container .popular{
+    width: 25%;
+}
+
+.bottom-container .popular .header{
+    margin-bottom: 40px;
+}
+
+.bottom-container .popular .header a{
+    font-size: 12px;
+    color: #000;
+    font-weight: 600;
+    padding: 4px 8px;
+    background: #f3f3f3;
+    border-radius: 20px;
+}
+
+.bottom-container .popular > img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.bottom-container .popular .audio{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.bottom-container .popular .audio i{
+    font-size: 26px;
+    background: #eff6ff;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.bottom-container .popular .audio a{
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    line-height: 18px;
+}
+
+.bottom-container .popular > p{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.bottom-container .popular .listen{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-container .popular .listen .author{
+    padding: 6px 10px;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.bottom-container .popular .listen .author img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.bottom-container .popular .listen .author a{
+    font-size: 14px;
+    color: #000;
+}
+
+.bottom-container .popular .listen .author p{
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+.bottom-container .popular .listen button{
+    border: none;
+    color: #fff;
+    background: #031224;
+    padding: 6px 14px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.bottom-container .popular .listen button i{
+    font-size: 16px;
+}
+
+.bottom-container .upcoming{
+    width: 25%;
+}
+
+@media screen and (max-width: 1300px) {
+
+    .bottom-container .popular .audio a{
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+
+    .bottom-container .popular > p{
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+
+    .bottom-container .popular .listen{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bottom-container .popular .listen .author{
+        width: 100%;
+    }
+
+    .bottom-container .popular .listen button{
+        width: 100%;
+        justify-content: center;
+    }
+
+
+}
+
+@media screen and (max-width: 1080px) {
+
+    .top-container .nav .right-section .profile{
+        padding: 5px;
+    }
+
+    .top-container .nav .right-section .profile .info p,
+    .top-container .status .header h4#small{
+        display: none;
+    }
+
+    .top-container .status .items-list{
+        flex-wrap: wrap;
+    }
+
+    .top-container .status .items-list .item{
+        width: 48%;
+    }
+
+    .bottom-container{
+        flex-wrap: wrap;
+    }
+
+    .bottom-container .prog-status{
+        width: 100%;
+    }
+
+    .bottom-container .popular,
+    .bottom-container .market-status{
+        width: 48%;
+    }
+
+    .bottom-container .popular .audio a{
+        font-size: 15px;
+    }
+
+    .bottom-container .popular > p{
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    .bottom-container .popular .listen{
+        flex-direction: row;
+    }
+
+    .bottom-container .popular .listen button{
+        width: 50%;
+    }
+
+    .bottom-container .market-status .events .item{
+        padding: 10px;
+    }
+
+    .bottom-container .market-status .events .item > div i{
+        font-size: 30px;
+    }
+
+    .bottom-container .market-status .events .item .event-info a{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .top-container .nav{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .top-container .status .items-list .item .info h5{
+        font-size: 15px;
+    }
+
+    .bottom-container .popular{
+        width: 100%;
+    }
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Modify or remove the border-radius and box-shadow for a flatter look */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0px; /* Changed from 24px to 0px */
+    box-shadow: none; /* Removed box shadow */
+    flex: 1;
+    box-sizing: border-box;
+}
+
+
+.container h1{
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    margin-bottom: 8px;
+}
+
+form input{
+    flex: 1;
+    padding: 6px;
+    font-size: 1rem;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+form button{
+    padding: 6px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background-color: #ffb92a;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background-color: #ce8b00;
+}
+
+#stock-list{
+    list-style: none;
+}
+
+#stock-list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#stock-list li:last-child{
+    border-bottom: none;
+}
+
+li.error{
+    color: red;
+}
+.stock-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.stock-bubble {
+    flex: 0 0 calc(20% - 10px); /* 5 bubbles in a row with some spacing */
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.stock-bubble:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+.stock-symbol {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stock-change {
+    font-size: 14px;
+}
+#history-list {
+    margin-top: 10px;
+    max-height: 150px; /* Limit the height */
+    overflow-y: auto; /* Enable scrolling if too many items */
+}
+
+.history-item {
+    cursor: pointer; /* Show a pointer on hover */
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 2px 0;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.history-item:hover {
+    background-color: #e9ecef; /* Darker background on hover */
+}
+.stock-bubble {
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
+    /* Existing styles */
+    padding: 10px; /* Optional: add some padding for better appearance */
+    border-radius: 5px; /* Optional: rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.stock-bubble:hover {
+    transform: translateY(-5px); /* Move up slightly */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.market-news {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.market-news h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.market-news h4::before {
+    content: '📰';
+    margin-right: 10px;
+}
+
+.news-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid #3498db;
+}
+
+.news-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.news-item h5 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.news-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.news-source {
+    background: #3498db;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 15px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.news-date {
+    color: #666;
+}
+
+.news-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.news-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.news-summary {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.news-link {
+    display: inline-block;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.news-link:hover {
+    color: #2980b9;
+}
+
+/* Custom scrollbar for the news container */
+.market-news::-webkit-scrollbar {
+    width: 8px;
+}
+
+.market-news::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.market-news::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 4px;
+}
+
+.market-news::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}
+
+/* Loading animation */
+.news-loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.news-error {
+    text-align: center;
+    padding: 20px;
+    color: #e74c3c;
+    background: #fde8e7;
+    border-radius: 8px;
+}
+
+.item {
+    height: 120px;
+    padding: 1rem;
+}
+
+.info {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to top */
+    position: relative; /* Add this */
+    padding-right: 30px; /* Add space for icon */
+}
+
+.market-info {
+    height: 100%;
+    width: 100%;
+}
+
+.market-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.status-line {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.label {
+    font-size: 0.9rem;
+    margin-right: 5px; /* Add space between label and value */
+}
+
+#currentTime, #marketStatus {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.info {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding-right: 30px;
+}
+
+.info i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.2rem;
+}
+
+.item {
+    height: 120px;
+    padding: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content, .market-news {
+    flex: 1;
+}
+
+.footer {
+    width: 100%;
+    background-color: #031224;
+    color: #fff;
+    padding: 60px 0 30px; /* Increased overall padding */
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* This will spread out the sections */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-section {
+    flex: 0 1 calc(25% - 40px); /* Reduced width to create more space between sections */
+    margin-bottom: 30px;
+    padding: 0 20px; /* Added horizontal padding to each section */
+}
+
+.footer-section h3 {
+    font-size: 20px; /* Slightly larger headings */
+    margin-bottom: 25px; /* Increased space below headings */
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px; /* Increased top padding */
+    margin-top: 40px; /* Increased top margin */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+    color: #a0a0a0;
+}
+
+/* Clear any floats */
+.market-news::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .footer-section {
+        flex: 0 1 calc(50% - 40px); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 40px; /* Increased margin for mobile */
+        padding: 0; /* Remove horizontal padding on mobile */
+    }
+
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-content {
+        padding: 0 20px;
+    }
+}
+.financial-data-container {
+    display: none; /* Hide by default */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Financial Box Styles */
+.financial-box {
+    background-color: #ffffff; /* White background for contrast */
+    border: 1px solid #031224; /* Dark navy border for definition */
+    border-radius: 8px; /* Rounded corners for a modern touch */
+    padding: 15px; /* Reduced padding for a more compact feel */
+    margin: 10px; /* Space between boxes */
+    text-align: center;
+    width: calc(33.333% - 20px); /* Adjusted for new margins */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+}
+
+.financial-box:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Text Styles */
+.financial-box h3 {
+    margin: 0;
+    font-size: 1.1rem; /* Smaller font size for headings */
+    color: #031224; /* Dark navy color for headings */
+    text-transform: uppercase; /* Uppercase for a bold look */
+}
+
+.financial-box p {
+    margin: 5px 0 0; /* Reduced margin for a compact look */
+    font-size: 0.9rem; /* Smaller font size for body text */
+    color: #000000; /* Black color for readability */
+}
+
+/* Time Range Style */
+.time-range {
+    display: none; /* Removed display of "data as of" */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .financial-box {
+        width: calc(50% - 20px); /* Adjusted for new margins */
+    }
+}
+
+@media (max-width: 480px) {
+    .financial-box {
+        width: calc(100% - 20px); /* Adjusted for new margins */
+    }
+}
+.company-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    color: #031224;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 95%;
+    max-width: 800px;
+    height: 70%;
+    max-height: 450px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.company-logo {
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+.popup-title {
+    font-size: 1.8em;
+    color: #031224;
+    margin: 0;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #031224;
+    padding-bottom: 8px;
+}
+
+.popup-content p {
+    margin-bottom: 12px;
+    font-size: 1em;
+}
+
+.popup-content button {
+    background-color: #031224;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    align-self: center;
+}
+
+.popup-content button:hover {
+    background-color: #062448;
+}
+
+.stock-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.popup-content a {
+    color: #031224;
+    text-decoration: none;
+}
+
+.popup-content a:hover {
+    text-decoration: underline;
+}
+#suggestion-list {
+    position: absolute;
+    top: calc(100% + 4px); /* Positions the list right below the input with a small gap */
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    max-height: 200px; /* Limit the height of the suggestion list */
+    overflow-y: auto; /* Add scroll if there are too many suggestions */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#suggestion-list li {
+    padding: 12px 16px; /* More padding for a better touch target */
+    cursor: pointer;
+    font-family: Arial, sans-serif; /* Use a clean font */
+    font-size: 14px; /* Slightly larger font size */
+    color: #333; /* Darker text color */
+    transition: background-color 0.2s ease; /* Smooth background color transition */
+}
+
+#suggestion-list li:hover {
+    background-color: #e0e0e0; /* Light gray background on hover */
+    color: #000; /* Darker text color on hover */
+}
+
+#suggestion-list li strong {
+    color: #007BFF; /* Highlighted text color */
+}
+
+#suggestion-list li:active {
+    background-color: #d0d0d0; /* Darker gray when clicked */
+}
+/* Profile container styling */
+.profile {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #0D1B2A; /* Dark blue background (approximation from image) */
+    border: 1px solid #ffffff; /* White border for visibility */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 150px;
+    z-index: 10;
+    padding: 0;
+    list-style-type: none;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+    color: #ffffff; /* White text for contrast */
+    border-bottom: 1px solid #ffffff; /* White border between items */
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li:hover {
+    background-color: #1A2E3A; /* Slightly lighter blue for hover effect */
+    color: #ffffff; /* Keep text white on hover */
+}
+
+
+

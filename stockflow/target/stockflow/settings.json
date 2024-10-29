@@ -1,0 +1,12 @@
+{
+    "java.project.sourcePaths": [
+        "src",
+        ".vscode"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/jackson-databind-2.18.0-rc1.jar",
+        "lib/jackson-core-2.18.0-rc1",
+        "lib/jackson-annotations-2.18.0-rc1.jar",
+    ]
+}

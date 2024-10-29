@@ -1,0 +1,5 @@
+com\example\userauth\Login.class
+com\example\userauth\DatabaseConnection.class
+com\example\userauth\SignUp.class
+com\example\userauth\SignUpServlet.class
+com\example\userauth\LoginServlet.class
